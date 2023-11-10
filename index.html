@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>3D Shape Calculator</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="app.js"></script>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1>3D Shape Calculator</h1>
+    <label for="shapeSelect">Select a shape:</label>
+    <select id="shapeSelect" onchange="showImageAndExplanations()">
+        <option value="select">Select a shape...</option>
+        <option value="sphere">Sphere</option>
+        <option value="cube">Cube</option>
+        <option value="cylinder">Cylinder</option>
+        <option value="pyramid">Pyramid</option>
+        <option value="cone">Cone</option>
+    </select>
+    <br>
+    <div id="shapeImage">
+        <img src="sphere.jpg" alt="Sphere" class="shape-image">
+    </div>
+    <label class="select-text">Select units:</label>
+    <select id="unitSelect">
+        <option value="units">Select a unit...</option>
+        <option value="mm">mm</option>
+        <option value="cm">cm</option>
+        <option value="dm">dm</option>
+        <option value="dam">dam</option>
+        <option value="hm">hm</option>
+        <option value="km">km</option>
+        <option value="mi">mi</option>
+        <option value="in">in</option>
+        <option value="ft">ft</option>
+        <option value="yd">yd</option>
+    </select>
+    <div id="result">
+        <div class="shape-info">
+            <div id="measurements">
+                <p id="volume">Volume: </p>
+                <p id="surfaceArea">Surface Area: </p>
+            </div>
+        </div>
+        <div id="explanations" class="hidden"></div>
+        <button id="toggleExplanations" style="display: none" onclick="toggleExplanations()">Show Explanations</button>
+    </div>
+    <button onclick="calculate()">Calculate</button>
+</body>
+</html>
