@@ -105,9 +105,12 @@ function calculate() {
             const explanations = `
                 <p><strong>Origin of the formula:</strong></p>
                 <p><strong>Volume:</strong></p>
+                <img src="https://www.math.net/img/a/geometry/volume-and-surface-area/volume-of-a-cube/cubic-of-5-volume.png">
                 <p>The formula for volume of a cube is V = a³, where 'a' is the length of a side. We can understand it by noticing how many cubic units of cubes can fit inside the cube. We notice that we can fit all cubic units along one side (a) and another side (a) to get a flat square. But we can stack it above each another 'a' times, which leaves us with (a)(a)(a)=a³</p>
                 <p><strong>Surface area:</strong></p>
-                <p>The formula for surface area of a cube is SA = 6a², where 'a' is the length of a side. It is basically the sum of the areas of all six faces, which are all squares (since all of its sides are 'a'). The area of each square is a². Since we have 6, it becomes 6a².</p>
+                <p>This is the net of a cube:</p>
+                <img src="https://yourmaths.files.wordpress.com/2013/07/cube2a.jpg">
+                <p>The formula for surface area of a cube is SA = 6a², where 'a' is the length of a side. It is basically the sum of the areas of all six faces, which are all squares (since all of its sides are 'a'). From the picture above, it is obvious that we see six congruent squares with side lengths a, that form the cube. The area of each square is a². Since we have 6, it becomes 6a².</p>
             `;
             document.getElementById("explanations").innerHTML = explanations;
         } else {
@@ -126,10 +129,15 @@ function calculate() {
 
             const explanations = `
                 <p><strong>Origin of the formula:</strong></p>
+                <p><strong>Volume:</strong></p>
+                <img src="https://www.ontrack-media.net/geometry/gm4l10image5.jpg"> 
                 <p>The formula for the volume of a cylinder is V = πr²h, where 'r' is the radius and 'h' is the height.</p>
                 <p>For the volume, we can imagine a cylinder stacked circles with infinitely small heights. Because we notice that a cylinder is practically many circles stacked on top of each other, we just need to find out how many times we do this, which is h times (h for height). Therefore the volume of a cylinder is V =  πr²h.
+                <p><strong>Surface area:</strong></p>
                 <p>The formula for the surface area of a cylinder is SA = 2πr(r + h), where 'r' is the radius and 'h' is the height.</p>
-                <p>When we take apart the components of a cylinder, we get two circles and a rectangle, with a width equivalent to the circumference of the circle, and the length equivalent to the height of the cylinder. This becomes SA = 2πr²+πd(h) which essentially becomes SA = 2πr(r+h).</p>
+                <p>When we take apart the components of a cylinder, we get two circles and a rectangle, like this:</p>
+                <img src="https://images.nagwa.com/figures/explainers/956104172478/4.svg">
+                <p>Here, we notice that the width of the rectangle is equivalent to the circumference of the circle, and the length equivalent to the height of the cylinder. This becomes SA = 2πr²+2πr(h) which essentially becomes SA = 2πr(r+h).</p>
             `;
             document.getElementById("explanations").innerHTML = explanations;
         } else {
@@ -148,10 +156,14 @@ function calculate() {
 
             const explanations = `
                 <p><strong>Origin of the formula:</strong></p>
+                <p><strong>Volume:</strong></p>
                 <p>The formula for the volume of a pyramid is V = (1/3)Bh, where 'B' is the base area and 'h' is the height. We can visualize this as a rectangular prism with a multiple lines that exit out of it's centroid to each of it's vertices like this, where each pyramid has a base of one of the faces of the rectangular prism:</p>
                 <p><img src="prism_demo.png"></p>
                 <p>Here, we see that the height of the pyramid is half the width of the prism. That means that when the height of the pyramid is half the width of the prism, the volume is six times less than the volume of the prism. Since we want to find the volume of the pyramid when they have equivalent heights, that would simply be 1/3 of the prism. so V = (1/3)BH.</p>
-                <p>The formula for the surface area of a pyramid is SA = lw+l√((w/2)²+h²)+w√((l/2)²+h²), where l, w and h are base length, base width and pyramid height respectively. When we divide the componenets of the pyramid, we get a rectangle and four triangles, whose height is equivalent to √((w/2)²+h²), which is the pythagorean theorem. By adding all these areas up, we get SA = lw+l√((w/2)²+h²)+w√((l/2)²+h²</p>
+                <p><strong>Surface area:</strong></p>
+                <p>The formula for the surface area of a pyramid is SA = lw+l√((w/2)²+h²)+w√((l/2)²+h²), where l, w and h are base length, base width and pyramid height respectively. When we divide the componenets of the pyramid, we get a rectangle and four triangles:</p>
+                <img src="https://homework.study.com/cimages/multimages/16/image14460765686537716010.png">
+                <p>We notice that the height of each triangle is √((w/2)²+h²) (pythagoras). By adding all these areas up, we get SA = lw+l√((w/2)²+h²)+w√((l/2)²+h²</p>
             `;
             document.getElementById("explanations").innerHTML = explanations;
         } else {
@@ -170,17 +182,20 @@ function calculate() {
 
             const explanations = `
                 <p><strong>Origin of the formula:</strong></p>
+                <p><strong>Volume:</strong></p>
                 <p>The formula for the volume of a cone is V = (1/3)πr²h, where 'r' is the radius and 'h' is the height. Consider the following drawing:</p>
-                <p><img src="cone_surface_area"></p>
+                <p><img src="cone_surface_area.png"></p>
                 <p>Assume a cone composed of infinite circular rings of decreasing (r) stacked. Their thickness can be an infinitely small differential element, say (dx).
                 <p>This circle from distance x from base will have an area of [πr^2(h-x)^2]/h^2</p>
                 <p>Therefore, the volume of an this infinitesimally circle will be {[πr^2(h-x)^2]/h^2}dx</p>
                 <p>Adding volumes of all these strips from x=0 to x=h will require integration (Adding all parts), where we do an integral to {[πr^2(h-x)^2]/h^2}dx</p>
                 <p>As we input in a calculator, the definite integral of {[πr^2(h-x)^2]/h^2}dx will be equivalent to (πr^2h)/3</p>
+                <p><strong>Surface area:</strong></p>
                 <p>The formula for the surface area of a cone is SA = πr(r + √(r² + h²)), where 'r' is the radius and 'h' is the height.</p>
-                <p>Consider a right ciruclar cone with radius r and slant height l</p>
+                <p>Consider a right circular cone with radius r and slant height l.</p>
+                <img src="https://cdn1.byjus.com/wp-content/uploads/2020/03/Surface-Area-Of-A-Cone-2.png">
                 <p>The lateral surface of the cone can be visualized as a sector of a circle that, when unrolled, forms a sector with an arc length equal to the circumference of the base and a radius equal to the slant height of the cone.</p>
-                <p>the cicumference of the base of the cone is the same as the circumference of the circle with radius r, given by 2πr.</p>
+                <p>The cicumference of the base of the cone is the same as the circumference of the circle with radius r, given by 2πr.</p>
                 <p>The arc length of the sector forming the lateral surface of the cone is equal to the circumference of the ase, which is 2πr.</p>
                 <p>So, the lateral surface area of the cone is the area of this unrolled sector, which is equal to the circumference of the base multiplied by the slant height l:</p>
                 <p>Lateral Surface Area of cone=πrl, where r is the radius of the base of the cone, and l is the slant height of the cone.</p>
